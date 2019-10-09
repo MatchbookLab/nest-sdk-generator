@@ -6,7 +6,9 @@
   "scripts": {
     "build": "tsc -P ./tsconfig.json",
     "build:watch": "watch 'npm run build' ./src/",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "release": "np --no-tests",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "version": "npm run build"
   },
   "bin": {
     "nest-sdk-gen": "dist/main.js"
