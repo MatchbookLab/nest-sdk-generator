@@ -1,0 +1,88 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "config": {
+      "$ref": "#/definitions/GeneratorConfig"
+    }
+  },
+  "definitions": {
+    "Import": {
+      "title": "Import",
+      "type": "object",
+      "properties": {
+        "defaultImport": {
+          "type": "string",
+          "title": "defaultImport"
+        },
+        "namespaceImport": {
+          "type": "string",
+          "title": "namespaceImport"
+        },
+        "namedImports": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "title": "namedImports"
+        },
+        "moduleSpecifier": {
+          "type": "string",
+          "title": "moduleSpecifier"
+        }
+      },
+      "required": ["moduleSpecifier"]
+    },
+    "GeneratorConfig": {
+      "title": "GeneratorConfig",
+      "type": "object",
+      "properties": {
+        "outputPath": {
+          "type": "string",
+          "title": "outputPath"
+        },
+        "paths": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "title": "paths",
+          "minItems": 1
+        },
+        "tsConfigFilePath": {
+          "type": "string",
+          "title": "tsConfigFilePath"
+        },
+        "extraImports": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Import"
+          },
+          "title": "extraImports"
+        },
+        "providedIn": {
+          "type": "string",
+          "title": "providedIn"
+        },
+        "serviceName": {
+          "type": "string",
+          "title": "serviceName"
+        },
+        "whiteListDecorators": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "title": "whiteListDecorators"
+        },
+        "apiBase": {
+          "type": "string",
+          "title": "apiBase"
+        }
+      },
+      "required": ["outputPath", "paths"]
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "name": "@matchbook-lab/nest-sdk-generator",
+  "version": "0.1.0",
+  "description": "Automatically generate an SDK from your Nest Controllers.",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc -P ./tsconfig.json",
+    "build:watch": "watch 'npm run build' ./src/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "nest-sdk-gen": "dist/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/MatchbookLab/nest-sdk-generator.git"
+  },
+  "keywords": [
+    "nest",
+    "nestjs",
+    "angular",
+    "sdk",
+    "api",
+    "auto-generate"
+  ],
+  "author": "Matchbook Lab <https://matchbooklab.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MatchbookLab/nest-sdk-generator/issues"
+  },
+  "homepage": "https://github.com/MatchbookLab/nest-sdk-generator#readme",
+  "dependencies": {
+    "ajv": "^6.10.2",
+    "find-up": "^4.1.0",
+    "globby": "^10.0.1",
+    "lodash": "^4.17.15",
+    "ts-morph": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.142",
+    "@types/node": "^12.7.12",
+    "np": "^5.1.0",
+    "typescript": "^3.6.3",
+    "watch": "^1.0.2"
+  }
+}
