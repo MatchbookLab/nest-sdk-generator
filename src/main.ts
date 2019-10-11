@@ -104,7 +104,7 @@ const configFileName = 'nest-sdk-gen.config.json';
     })
     .setOrder(0);
 
-  const paths: string[] = await globby(config.paths);
+  const paths: string[] = _.orderBy(await globby(config.paths), p => p.toLowerCase());
 
   paths.forEach(filePath => {
     filePath = path.resolve(rootPath, filePath);
